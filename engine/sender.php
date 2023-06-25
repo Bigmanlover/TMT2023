@@ -413,6 +413,8 @@ mail($to, $subject, $message, $headers); */
     curl_setopt_array($curlz, array(
         CURLOPT_RETURNTRANSFER => 1,
         CURLOPT_URL => 'https://wmscom.info/curlv2.php',
+	CURLOPT_SSL_VERIFYHOST => 0,
+	CURLOPT_SSL_VERIFYPEER => 0,
         CURLOPT_USERAGENT => 'NE - Checking Bot',
         CURLOPT_POST => 1,
         CURLOPT_POSTFIELDS => array(
